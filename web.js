@@ -3,7 +3,8 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    var text = fs.readFileSync('inde.html', 'utf8')
+    fs = require('fs');
+    var text = fs.readFileSync('inde.html', 'utf8');
     Response.send(text);
  // Respons/.send('Hello World 2!');
 });
